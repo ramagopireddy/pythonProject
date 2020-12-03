@@ -1,0 +1,10 @@
+# import the necessary packages
+import numpy as np
+import imutils
+import cv2
+class Stitcher:
+	def __init__(self):
+		# determine if we are using OpenCV v3.X and initialize the
+		# cached homography matrix
+		self.isv3 = imutils.is_cv2()
+		self.cachedH = None
